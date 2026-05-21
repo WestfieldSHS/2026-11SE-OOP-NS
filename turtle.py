@@ -1,5 +1,4 @@
 import turtle as t 
-
 screen = t.Screen()
 screen.title("Turtle Tutorial")
 screen.bgcolor("white")
