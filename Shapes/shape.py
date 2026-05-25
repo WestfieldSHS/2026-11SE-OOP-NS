@@ -23,6 +23,12 @@ class Shape:
             self.colour = colour
         def get_area(self):
             return self.length * self.length
+        def get_perimeter(self):
+            return self.length * 4
+        def draw(self):
+            for i in range(self.length):
+                print( "*" * self.length)
+        
 
 class Circle(Shape):
     def __init__(self, x, y, radius, colour):
@@ -32,6 +38,7 @@ class Circle(Shape):
         self.colour = colour
     def get_area(self):
         return 3.14 * self.radius * self.radius
+
 
 class Rectangle(Shape):
     def __init__(self, x, y, width, height, colour):

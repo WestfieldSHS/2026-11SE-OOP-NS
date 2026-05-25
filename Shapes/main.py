@@ -36,10 +36,21 @@ Square1 = Square(0, 0, 5, "red")
 print(Square1.get_area())
 print(Square1.get_perimeter())
 Square1.draw()
+print()
+
 
 Square2 = Square(0, 0, 10, "blue")
 print(Square2.get_area())
 print(Square2.get_perimeter())
+Square2.draw()
+print()
+
+Square3 = Square(0, 0, 15, "green")
+print(f'Area: {Square3.get_area()}')
+print(f'Perimeter: {Square3.get_perimeter()}')
+Square3.draw()
+print()
+
 
 
 
