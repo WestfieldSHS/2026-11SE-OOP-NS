@@ -1,6 +1,8 @@
-from turtle import *
+import turtle as t
 
-crush = Turtle()
+screen = t.Screen()
+
+crush = t.Turtle()
 crush.shape("turtle")
 crush.color("orange")
 
@@ -13,3 +15,4 @@ crush.backward(100)
 
 input()
 
+screen.exitonclick()

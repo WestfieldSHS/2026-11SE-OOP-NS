@@ -4,7 +4,7 @@ colours = ["red", "orange", "blue", "yellow", "purple", "black"]
 
 screen = t.Screen()
 
-crush = t.turtle()
+crush = t.Turtle()
 crush.shape("turtle")
 crush.pendown()
 
@@ -15,3 +15,4 @@ for i in range(0, 25):
 
     screen.exitonclick()
 
+    
