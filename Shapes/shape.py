@@ -21,6 +21,8 @@ class Shape:
             self.y = y
             self.length = length
             self.colour = colour
+        def get_area(self):
+            return self.length * self.length
 
 class Circle(Shape):
     def __init__(self, x, y, radius, colour):
@@ -28,6 +30,8 @@ class Circle(Shape):
         self.y = y
         self.radius = radius
         self.colour = colour
+    def get_area(self):
+        return 3.14 * self.radius * self.radius
 
 class Rectangle(Shape):
     def __init__(self, x, y, width, height, colour):
@@ -36,4 +40,5 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
         self.colour = colour
-        
+    def get_area(self):
+        return self.length * self.length

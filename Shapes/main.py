@@ -1,10 +1,11 @@
 
 from Shapes import *
 
-shape1 = Shape()
-shape1.x = 10
-shape1.y = 20
-shape1.colour = "red"
+Square1 = Square(0,0,5,"red")
+print(Square1.get_area())
 
-print(shape1.colour)
+Square2 = Square(0,0,10,"blue")
+print(Square2.get_area())
+
+
 
