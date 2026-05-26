@@ -97,3 +97,40 @@ print(f'Area: {Rectangle3.get_area()}')
 print(f'Perimeter: {Rectangle3.get_perimeter()}')
 Rectangle3.draw()
 print()
+
+# Circle class
+class Circle:
+    def __init__(self, x, y, radius, color):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+
+    def get_area(self):
+        return 3.14 * self.radius * self.radius
+    
+    def get_circumference(self):
+        return 2 * 3.14 * self.radius
+    def draw(self):
+        for i in range(self.radius * 2):
+            print(self.color + " " * (self.radius * 2))
+
+Circle1 = Circle(0, 0, 5, "red")
+print(f'Area: {Circle1.get_area()}')
+print(f'Circumference: {Circle1.get_circumference()}')
+Circle1.draw()
+print()
+
+Circle2 = Circle(0, 0, 10, "blue")
+print(f'Area: {Circle2.get_area()}')
+print(f'Circumference: {Circle2.get_circumference()}')
+Circle2.draw()
+print()
+
+Circle3 = Circle(0, 0, 15, "green")
+print(f'Area: {Circle3.get_area()}')
+print(f'Circumference: {Circle3.get_circumference()}')
+Circle3.draw()
+print()
+
+  
