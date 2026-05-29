@@ -157,5 +157,20 @@ print(f'Circumference: {Circle3.get_circumference()}')
 Circle3.draw()
 print()
  
+# Triangle Class
+class Triangle:
+    def __init__(self, x, y, base, height, color):
+        self.x = x
+        self.y = y
+        self.base = base
+        self.height = height
+        self.color = color_map.get(str(color).lower(), '')
 
-  
+    def get_area(self):
+        return 0.5 * self.base * self.height
+    
+    def get_perimeter(self):
+        return self.base + self.height + ((self.base ** 2 + self.height ** 2) ** 0.5)
+    def draw(self):
+        for i in range(self.height):
+            print(self.color + " " * (self.base * (i + 1) // self.height))
