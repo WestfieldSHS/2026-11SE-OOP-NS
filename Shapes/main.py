@@ -174,3 +174,23 @@ class Triangle:
     def draw(self):
         for i in range(self.height):
             print(self.color + " " * (self.base * (i + 1) // self.height))
+
+
+Triangle1 = Triangle(0, 0, 5, 3, "red")
+print(f'Area: {Triangle1.get_area()}')
+print(f'Perimeter: {Triangle1.get_perimeter()}')  
+Triangle1.draw()
+print()
+
+Triangle2 = Triangle(0, 0, 10, 5, "blue")
+print(f'Area: {Triangle2.get_area()}')
+print(f'Perimeter: {Triangle2.get_perimeter()}')
+Triangle2.draw()
+print()
+
+Triangle3 = Triangle(0, 0, 15, 10, "green")
+print(f'Area: {Triangle3.get_area()}')
+print(f'Perimeter: {Triangle3.get_perimeter()}')
+Triangle3.draw()
+print()
+
