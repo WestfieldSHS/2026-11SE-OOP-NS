@@ -1,3 +1,27 @@
+try:
+    from colorama import Fore, Back, Style, init
+    init()
+except Exception:
+    # Fallbacks if colorama is not installed
+    class _FG:
+        RED = ''
+        BLUE = ''
+        GREEN = ''
+        RESET = ''
+
+    class _ST:
+        RESET_ALL = ''
+
+    Fore = _FG()
+    Style = _ST()
+
+# simple mapping from name to Fore constant
+color_map = {
+    'red': getattr(Fore, 'RED', ''),
+    'blue': getattr(Fore, 'BLUE', ''),
+    'green': getattr(Fore, 'GREEN', ''),
+}
+
 class Shape:
     x = 0
     y = 0 
@@ -22,7 +46,7 @@ class Square:
         self.x = x
         self.y = y
         self.length = length
-        self.color = color
+        self.color = color_map.get(str(color).lower(), '')
 
     def get_area(self):
         return self.length * self.length
@@ -65,7 +89,7 @@ class Rectangle:
         self.y = y
         self.width = width
         self.height = height
-        self.color = color
+        self.color = color_map.get(str(color).lower(), '')
 
     def get_area(self):
         return self.width * self.height
@@ -104,7 +128,7 @@ class Circle:
         self.x = x
         self.y = y
         self.radius = radius
-        self.color = color
+        self.color = color_map.get(str(color).lower(), '')
 
     def get_area(self):
         return 3.14 * self.radius * self.radius
@@ -132,5 +156,6 @@ print(f'Area: {Circle3.get_area()}')
 print(f'Circumference: {Circle3.get_circumference()}')
 Circle3.draw()
 print()
+ 
 
   
