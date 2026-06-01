@@ -55,10 +55,10 @@ class Person:
 
     
     teacher1 = Teacher("Barbara", "O'Malley", date(1962, 1, 1), ["Math", "Computing Technology","Software Engineering"])
-        print(teacher1.get_full_name())
-        print(teacher1.get_age())
-        print(teacher1.classes)
-        print(teacher1.add_classes("STEM"))
+    print(teacher1.get_full_name())
+    print(teacher1.get_age())
+    print(teacher1.classes)
+    print(teacher1.add_classes("STEM"))
 
 
 

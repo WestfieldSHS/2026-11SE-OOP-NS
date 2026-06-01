@@ -1,8 +1,14 @@
-import olorama 
-from colorama import Fore, Style
+from colorama import init, Fore, Style
+from datetime import date
+from person import Person
 from student import Student
 from teacher import Teacher
-from person import Person
+
+print(Fore.GREEN + Style.BRIGHT + "Welcome to the Person Information System!" + Style.RESET_ALL)
+print(Fore.BLUE + "You can enter information about a student or a teacher." + Style.RESET_ALL)
+print(Fore.YELLOW + "Let's get started!" + Style.RESET_ALL)
+print(Fore.CYAN + "Please follow the prompts to enter the required information." + Style.RESET_ALL)
+
 
 def main():
     person_type = input("Enter the type of person (student/teacher): ").upper()
@@ -35,4 +41,5 @@ def get_teacher_info():
     return Teacher(first_name, last_name, date_of_birth, classes)
 
 if __name__ == "__main__":
+    init()
     main()
