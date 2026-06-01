@@ -39,8 +39,8 @@ class Person:
     
 
     # Driver Code
-    Person 1 = Person("Willa", "Johnston", date(2010,1 ,1))
-    print(Person.first_name)
+    Person1 = Person("Willa", "Johnston", date(2010,1 ,1))
+    print(Person1.first_name)
     
 
     class Student(Person):
