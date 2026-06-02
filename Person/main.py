@@ -1,4 +1,20 @@
-from colorama import init, Fore, Style
+try:
+    from colorama import init, Fore, Style
+except Exception:
+    # Provide fallbacks if colorama is not available
+    def init():
+        return None
+
+    class _Empty:
+        RESET_ALL = ""
+        BRIGHT = ""
+        GREEN = ""
+        BLUE = ""
+        YELLOW = ""
+        CYAN = ""
+
+    Fore = _Empty()
+    Style = _Empty()
 from datetime import date
 from person import Person
 from student import Student
