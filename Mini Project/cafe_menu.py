@@ -32,8 +32,12 @@ if __name__ == "__main__":
     menu.add_drink(drink("Matcha Latte", 4.50))
     menu.add_drink(drink("Chai Tea", 3.75))
     menu.add_drink(drink("Espresso", 3.50))
+    menu.add_drink(drink("Iced Coffee", 4.00))
+    menu.add_drink(drink("Hot Chocolate", 3.25))
     menu.add_snack(snack("Croissant", 2.50))
     menu.add_snack(snack("Muffin", 3.00))
-    menu.add_snack(snack("Chicken Wrap", 5.00))
+    menu.add_snack(snack("Chicken Wrap", 5.00)) 
+    menu.add_snack(snack("Tuna melt", 5.50))
+    menu.add_snack(snack("Breakfast Burrito", 6.50))
     menu.display_menu()
 
