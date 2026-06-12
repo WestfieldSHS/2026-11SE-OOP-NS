@@ -41,3 +41,4 @@ if __name__ == "__main__":
     menu.add_snack(snack("Breakfast Burrito", 6.50))
     menu.display_menu()
 
+raise ValueError("Invalid Input.")
