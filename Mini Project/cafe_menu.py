@@ -20,9 +20,11 @@ class menu:
         self.snacks.append(snack)
 
     def display_menu(self):
-        print("Cafe Menu:")
+        print("Cafe Menu")
+        print("\nDrinks:")
         for drink in self.drinks:
             print(f"{drink.name}: ${drink.price:.2f}")
+        print("\nSnacks:")
         for snack in self.snacks:
             print(f"{snack.name}: ${snack.price:.2f}")
 
@@ -41,5 +43,6 @@ if __name__ == "__main__":
     menu.add_snack(snack("Breakfast Burrito", 6.50))
     menu.display_menu()
 
-raise ValueError("Invalid Input.")
+
+
 
