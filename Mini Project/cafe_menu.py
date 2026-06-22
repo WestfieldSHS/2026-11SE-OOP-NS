@@ -8,6 +8,10 @@ class snack:
         self.name = name
         self.price = price
 
+class ingredient:
+    def __init__(self, name):
+        self.name = name    
+
 class menu:
     def __init__(self):
         self.drinks = []
@@ -27,6 +31,14 @@ class menu:
         print("\nSnacks:")
         for snack in self.snacks:
             print(f"{snack.name}: ${snack.price:.2f}")
+
+    def get_ingredients(self, item_name):
+        if item_name in ingredients:
+            return ingredients[item_name]
+        else:
+            return "Item not found in menu."
+        
+    
 
 # Example usage
 if __name__ == "__main__":
@@ -58,5 +70,23 @@ if __name__ == "__main__":
 # Tuna melt: $5.50
 # Breakfast Burrito: $6.50 
 
+#Ingredients for each menu item can be retrieved using the get_ingredients method. For example:
+# print(menu.get_ingredients("Matcha Latte"))
+# Output: ['matcha powder', 'milk', 'sugar']
 
+# Ingredients for each menu item
+
+
+ingredients = {
+    "Matcha Latte": ["matcha powder", "milk", "sugar"],
+    "Chai Tea": ["black tea", "milk", "spices", "sugar"],
+    "Espresso": ["coffee beans", "water"],
+    "Iced Coffee": ["coffee", "ice", "milk", "sugar"],
+    "Hot Chocolate": ["cocoa powder", "milk", "sugar"],
+    "Croissant": ["flour", "butter", "yeast", "sugar"],
+    "Muffin": ["flour", "sugar", "eggs", "milk", "baking powder"],
+    "Chicken Wrap": ["tortilla", "chicken", "lettuce", "tomato", "sauce"],
+    "Tuna melt": ["bread", "tuna", "cheese", "mayonnaise"],
+    "Breakfast Burrito": ["tortilla", "eggs", "bacon", "cheese", "potatoes"]
+}
 
