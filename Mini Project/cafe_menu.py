@@ -43,6 +43,20 @@ if __name__ == "__main__":
     menu.add_snack(snack("Breakfast Burrito", 6.50))
     menu.display_menu()
 
+# Output:
+# Cafe Menu
+# Drinks:
+# Matcha Latte: $4.50
+# Chai Tea: $3.75
+# Espresso: $3.50
+# Iced Coffee: $4.00
+# Hot Chocolate: $3.25
+# Snacks:
+# Croissant: $2.50
+# Muffin: $3.00
+# Chicken Wrap: $5.00
+# Tuna melt: $5.50
+# Breakfast Burrito: $6.50 
 
 
 
