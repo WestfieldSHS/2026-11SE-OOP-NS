@@ -7,10 +7,9 @@ class drink(Eats):
     def __init__(self, name, price):
         super().__init__(name, price)
 
-class snack(Eats):
+class food(Eats):
     def __init__(self, name, price):
-        self.name = name
-        self.price = price
+        super().__init__(name, price)
 
 class ingredient:
     def __init__(self, name):
@@ -19,22 +18,22 @@ class ingredient:
 class menu:
     def __init__(self):
         self.drinks = []
-        self.snacks = []
+        self.food = []
 
     def add_drink(self, drink):
         self.drinks.append(drink)
 
-    def add_snack(self, snack):
-        self.snacks.append(snack)
+    def add_food(self, food):
+        self.food.append(food)
 
     def display_menu(self):
         print("Cafe Menu")
         print("\nDrinks:")
         for drink in self.drinks:
             print(f"{drink.name}: ${drink.price:.2f}")
-        print("\nSnacks:")
-        for snack in self.snacks:
-            print(f"{snack.name}: ${snack.price:.2f}")
+        print("\nFood:")
+        for food in self.food:
+            print(f"{food.name}: ${food.price:.2f}")
 
     def get_ingredients(self, item_name):
         if item_name in ingredients:
@@ -52,11 +51,11 @@ if __name__ == "__main__":
     menu.add_drink(drink("Espresso", 3.50))
     menu.add_drink(drink("Iced Coffee", 4.00))
     menu.add_drink(drink("Hot Chocolate", 3.25))
-    menu.add_snack(snack("Croissant", 2.50))
-    menu.add_snack(snack("Muffin", 3.00))
-    menu.add_snack(snack("Chicken Wrap", 5.00)) 
-    menu.add_snack(snack("Tuna melt", 5.50))
-    menu.add_snack(snack("Breakfast Burrito", 6.50))
+    menu.add_food(food("Croissant", 2.50))
+    menu.add_food(food("Muffin", 3.00))
+    menu.add_food(food("Chicken Wrap", 5.00))
+    menu.add_food(food("Tuna melt", 5.50))
+    menu.add_food(food("Breakfast Burrito", 6.50))
     menu.display_menu()
 
 # Output:
@@ -67,7 +66,7 @@ if __name__ == "__main__":
 # Espresso: $3.50
 # Iced Coffee: $4.00
 # Hot Chocolate: $3.25
-# Snacks:
+# Food:
 # Croissant: $2.50
 # Muffin: $3.00
 # Chicken Wrap: $5.00
