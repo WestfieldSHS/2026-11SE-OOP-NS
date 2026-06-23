@@ -1,9 +1,13 @@
-class drink:
+class Eats:
     def __init__(self, name, price):
         self.name = name
         self.price = price
 
-class snack:
+class drink(Eats):
+    def __init__(self, name, price):
+        super().__init__(name, price)
+
+class snack(Eats):
     def __init__(self, name, price):
         self.name = name
         self.price = price
