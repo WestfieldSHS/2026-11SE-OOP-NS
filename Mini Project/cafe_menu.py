@@ -104,6 +104,6 @@ ingredients = {
     "Muffin": ["flour", "sugar", "eggs", "milk", "baking powder"],
     "Chicken Wrap": ["tortilla", "chicken", "lettuce", "tomato", "sauce"],
     "Tuna melt": ["bread", "tuna", "cheese", "mayonnaise"],
-    "Breakfast Burrito": ["tortilla", "eggs", "bacon", "cheese", "potatoes"]
+    "Breakfast Burrito": ["tortilla", "eggs", "bacon", "melted cheese", "avocado", "hot sauce"]
 }
 
