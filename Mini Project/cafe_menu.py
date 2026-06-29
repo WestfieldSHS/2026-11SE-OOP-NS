@@ -1,3 +1,6 @@
+from tkinter import Menu
+
+
 class Eats:
     def __init__(self, name, price):
         self.name = name
@@ -19,6 +22,7 @@ class menu:
     def __init__(self):
         self.drinks = []
         self.food = []
+        self.food_ingredients = {}
 
     def add_drink(self, drink):
         self.drinks.append(drink)
@@ -41,8 +45,18 @@ class menu:
         else:
             return "Item not found in menu."
         
-    
+    def display_ingredients(self, item_name):
+        if item_name in ingredients:
+            print(f"Ingredients for {item_name}: {', '.join(ingredients[item_name])}")
+        else:
+            print("Item not found in menu.")
 
+    Menu.display_ingredients("Breakfast Burrito")
+    Menu.display_ingredients("Chicken Wrap")
+    Menu.display_ingredients("Croissant")
+    Menu.display_ingredients("Tuna melt")
+    Menu.display_ingredients("Muffin")
+    
 # Example usage
 if __name__ == "__main__":
     menu = menu()

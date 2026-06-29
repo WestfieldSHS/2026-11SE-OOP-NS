@@ -21,6 +21,6 @@ def CheckFruit():
     Radiobutton(root, text="Bananas", variable=var, value=2).grid(row=2, sticky=W)
     Radiobutton(root, text="Carrots", variable=var, value=3).grid(row=3, sticky=W)
 
-    Button(root, text="Say Hello", command=SayHello).grid(row=4, columnspan=2)
+    Button(root, text="Say Hello", command=CheckFruit).grid(row=4, columnspan=2)
 
     root.mainloop()
