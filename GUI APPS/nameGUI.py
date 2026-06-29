@@ -9,9 +9,9 @@ def SayHello():
 
     messagebox.showinfo("Hello", f"Hello {firstname} {lastname}")
 
-    root = Tk()
+root = Tk()
 
-    Label(root, text="First name").grid(row=0)
+Label(root, text="First name").grid(row=0)
 txtFirstname = Entry(root)
 txtFirstname.grid(row=0, column=1)
 
